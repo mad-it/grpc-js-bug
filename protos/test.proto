@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+package test;
+
+message WatchXResponse {
+  string data= 1;
+}
+
+message Empty {
+
+}
+
+service X {
+  rpc WatchX(Empty) returns (stream WatchXResponse);
+}
